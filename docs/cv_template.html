@@ -11,7 +11,7 @@
 
 
 
-<title>CV</title>
+<title>cv_template.knit.md</title>
 
 <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -229,6 +232,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -236,6 +302,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -273,7 +349,6 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">CV</h1>
 
 </div>
 
@@ -340,10 +415,10 @@ changes </a>
 <div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
+<p>The R Markdown is untracked by Git. To know which version of the R
+Markdown file created these results, you’ll want to first commit it to
+the Git repo. If you’re still working on the analysis, you can ignore
+this warning. When you’re finished, you can run
 <code>wflow_publish</code> to commit the R Markdown file and build the
 HTML.</p>
 </div>
@@ -408,110 +483,90 @@ have uncommitted changes.
 </div>
 <div id="versions" class="tab-pane fade">
 <p>
-These are the previous versions of the repository in which changes were
-made to the R Markdown (<code>analysis/about.Rmd</code>) and HTML
-(<code>docs/about.html</code>) files. If you’ve configured a remote Git
-repository (see <code>?wflow_git_remote</code>), click on the hyperlinks
-in the table below to view the files as they were in that past version.
+There are no past versions. Publish this analysis with
+<code>wflow_publish()</code> to start tracking its development.
 </p>
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-File
-</th>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-<th>
-Message
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/Galaksim/zajecia/b6eaba443fe569846dfd5ed7c070682180f5b17e/docs/about.html" target="_blank">b6eaba4</a>
-</td>
-<td>
-Galaksim
-</td>
-<td>
-2025-12-02
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/Galaksim/zajecia/b781076a5a5568ddaf4119241a611cf32a2cfb49/docs/about.html" target="_blank">b781076</a>
-</td>
-<td>
-Galaksim
-</td>
-<td>
-2025-12-02
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/Galaksim/zajecia/d8b8c54e5ac85dc97e4f5dee52a7dc2eac9f598d/docs/about.html" target="_blank">d8b8c54</a>
-</td>
-<td>
-Galaksim
-</td>
-<td>
-2025-12-02
-</td>
-<td>
-nowe analis
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/Galaksim/zajecia/blob/8b583935842d644d932636a88046e0c7234ce080/analysis/about.Rmd" target="_blank">8b58393</a>
-</td>
-<td>
-Galaksim
-</td>
-<td>
-2025-12-02
-</td>
-<td>
-Start workflowr project.
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 <hr>
 </div>
 </div>
 </div>
-<p>Describe your project.</p>
+<div id="r-_-s" class="section level1">
+<h1>R _ S</h1>
+<p><strong>Email:</strong> <a href="mailto:mc@bog.com"
+class="email">mc@bog.com</a> <strong>Telefon:</strong> +48 999 999 999
+999 999 <strong>Lokalizacja:</strong> Miasto, Kraj</p>
+<div id="podsumowanie" class="section level2">
+<h2>Podsumowanie</h2>
+<p>Mushrum</p>
+</div>
+<div id="doświadczenie-zawodowe" class="section level2">
+<h2>Doświadczenie zawodowe</h2>
+<div id="dwarf-hole.inc" class="section level3">
+<h3>dwarf | hole.inc</h3>
+<p><em>Okres zatrudnienia ( Styczeń 2002 - Styczeń 2020)</em></p>
+<ul>
+<li>I am a dwarf and I’m digging a hole</li>
+<li>Diggy, diggy hole, diggy, diggy hole</li>
+<li>I am a dwarf and I’m digging a hole</li>
+<li>Diggy, diggy hole, digging a hole</li>
+</ul>
+</div>
+<div id="miner-hole-kids.inc" class="section level3">
+<h3>miner | hole kids.inc</h3>
+<p><em>Okres zatrudnienia (Grudnzień 2000 - styczeń 2021)</em></p>
+<ul>
+<li>HOLE</li>
+<li>A BIG HOLE</li>
+<li>YES YES</li>
+</ul>
+</div>
+</div>
+<div id="edukacja" class="section level2">
+<h2>Edukacja</h2>
+<div id="study-of-holes-the-deap-mine" class="section level3">
+<h3>Study of holes | THE DEAP MINE</h3>
+<p><em>Rok ukończenia</em></p>
+<ul>
+<li>HOLE</li>
+<li>OF HOLE</li>
+<li>AND HOLE</li>
+</ul>
+</div>
+</div>
+<div id="umiejętności" class="section level2">
+<h2>Umiejętności</h2>
+<ul>
+<li><strong>Techniczne:</strong> Hole and explosives</li>
+<li><strong>Miękkie:</strong> Team work</li>
+<li><strong>Języki:</strong> Hole, mine, dwarf</li>
+</ul>
+</div>
+<div id="certyfikaty" class="section level2">
+<h2>Certyfikaty</h2>
+<ul>
+<li>HOLE, HOLE CORP , 2000</li>
+<li>HOLE2, HOLE CORP , 2002</li>
+</ul>
+</div>
+<div id="projekty" class="section level2">
+<h2>Projekty</h2>
+<div id="nazwa-projektu" class="section level3">
+<h3>Nazwa Projektu</h3>
+<ul>
+<li>HOLE AMING</li>
+<li>TNT</li>
+</ul>
+</div>
+</div>
+<div id="zainteresowania" class="section level2">
+<h2>Zainteresowania</h2>
+<ul>
+<li>HOLE</li>
+<li>HOLE 2 ELECRIK</li>
+<li>HOLE 3 TNT</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -534,6 +589,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -566,6 +623,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
