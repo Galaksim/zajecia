@@ -8,5 +8,5 @@ editor_options:
   chunk_output_type: console
 ---
 [pingwiny](palmer_penguins_cwiczenia.html)
-l
+l2
 Welcome to my research website.
