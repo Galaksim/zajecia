@@ -7,14 +7,18 @@ date: "`r Sys.Date()`"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library("knitr")
+
 ```
 
+
 ```{r, out.width = "25%", fig.align ='right'}
-knitr::include_graphics("data/pingwiny.png")
+#include_graphics("data/pingwiny.png")
+
 ```
 
 ```{r, out.width = "25%", fig.align ='center'}
-knitr::include_graphics("data/dziub.png")
+#include_graphics("data/dziub.png")
 ```
 
 ## Załadowanie danych

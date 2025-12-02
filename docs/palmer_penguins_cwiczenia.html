@@ -363,7 +363,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -374,8 +374,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -388,9 +388,9 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>zajecia/</code> <span
@@ -413,18 +413,21 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
@@ -515,15 +518,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomGalaksimzajeciatree290e39800d3bb124564fb82bead1200f59e0647btargetblank290e398a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomGalaksimzajeciatreefd38b72a11d7461ea1a9f8edbfbc8c3aa6c13924targetblankfd38b72a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/Galaksim/zajecia/tree/290e39800d3bb124564fb82bead1200f59e0647b" target="_blank">290e398</a>
+<a href="https://github.com/Galaksim/zajecia/tree/fd38b72a11d7461ea1a9f8edbfbc8c3aa6c13924" target="_blank">fd38b72</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomGalaksimzajeciatree290e39800d3bb124564fb82bead1200f59e0647btargetblank290e398a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomGalaksimzajeciatreefd38b72a11d7461ea1a9f8edbfbc8c3aa6c13924targetblankfd38b72a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -533,7 +536,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/Galaksim/zajecia/tree/290e39800d3bb124564fb82bead1200f59e0647b" target="_blank">290e398</a>.
+<a href="https://github.com/Galaksim/zajecia/tree/fd38b72a11d7461ea1a9f8edbfbc8c3aa6c13924" target="_blank">fd38b72</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -549,9 +552,15 @@ were generated:
 <pre><code>
 Ignored files:
     Ignored:    .Rproj.user/
+    Ignored:    analysis/dziub.png
+    Ignored:    analysis/pingwiny.png
+
+Untracked files:
+    Untracked:  analysis/figures/
 
 Unstaged changes:
     Modified:   analysis/_site.yml
+    Modified:   analysis/palmer_penguins_cwiczenia.Rmd
 
 </code></pre>
 <p>
@@ -597,6 +606,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/Galaksim/zajecia/fd38b72a11d7461ea1a9f8edbfbc8c3aa6c13924/docs/palmer_penguins_cwiczenia.html" target="_blank">fd38b72</a>
+</td>
+<td>
+Galaksim
+</td>
+<td>
+2025-12-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -689,22 +715,12 @@ nowe analis
 </div>
 </div>
 </div>
-<p><img src="data/pingwiny.png" width="25%" style="display: block; margin: auto 0 auto auto;" /></p>
-<p><img src="data/dziub.png" width="25%" style="display: block; margin: auto;" /></p>
 <div id="załadowanie-danych" class="section level2">
 <h2>Załadowanie danych</h2>
 <p>Najpierw musimy załadować pakiet, który zawiera interesujące nas dane
 i dowiedzieć się, co te dane przedstawiają.</p>
 <p>Ładujemy pakiet do pamięci R za pomocą polecenia
 <code>library()</code>:</p>
-<pre><code>Pomoc na temat &#39;penguins&#39; została znaleziona w następujących pakietach:
-
-  Package               Library
-  datasets              C:/Program Files/R/R-4.5.1/library
-  palmerpenguins        C:/Users/serko/AppData/Local/R/win-library/4.5
-
-
-Używanie pierwszego dopasowania ...</code></pre>
 </div>
 <div id="informacje-wstępne" class="section level2">
 <h2>Informacje wstępne</h2>
@@ -716,7 +732,7 @@ każdego gatunku i dla każdej lokalizacji:</p>
 1 Adelie      152
 2 Chinstrap    68
 3 Gentoo      124</code></pre>
-<table class=" lightable-paper lightable-striped lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<table class=" lightable-paper lightable-striped lightable-hover" style="color: black; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -821,24 +837,22 @@ attached base packages:
 
 other attached packages:
 [1] ggplot2_4.0.0        pander_0.6.6         dplyr_1.1.4         
-[4] kableExtra_1.4.0     palmerpenguins_0.1.1 workflowr_1.7.2     
+[4] kableExtra_1.4.0     palmerpenguins_0.1.1 knitr_1.50          
 
 loaded via a namespace (and not attached):
  [1] sass_0.4.10        utf8_1.2.6         generics_0.1.4     xml2_1.4.1        
- [5] stringi_1.8.7      digest_0.6.37      magrittr_2.0.4     grid_4.5.1        
- [9] evaluate_1.0.5     RColorBrewer_1.1-3 fastmap_1.2.0      rprojroot_2.1.1   
-[13] jsonlite_2.0.0     processx_3.8.6     whisker_0.4.1      ps_1.9.1          
-[17] promises_1.4.0     httr_1.4.7         viridisLite_0.4.2  scales_1.4.0      
-[21] textshaping_1.0.4  jquerylib_0.1.4    cli_3.6.5          rlang_1.1.6       
-[25] withr_3.0.2        cachem_1.1.0       yaml_2.3.10        otel_0.2.0        
-[29] tools_4.5.1        httpuv_1.6.16      vctrs_0.6.5        R6_2.6.1          
-[33] lifecycle_1.0.4    git2r_0.36.2       stringr_1.5.2      fs_1.6.6          
-[37] pkgconfig_2.0.3    callr_3.7.6        gtable_0.3.6       pillar_1.11.1     
-[41] bslib_0.9.0        later_1.4.4        glue_1.8.0         Rcpp_1.1.0        
-[45] systemfonts_1.3.1  xfun_0.53          tibble_3.3.0       tidyselect_1.2.1  
-[49] rstudioapi_0.17.1  knitr_1.50         farver_2.1.2       htmltools_0.5.8.1 
-[53] rmarkdown_2.30     svglite_2.2.2      compiler_4.5.1     S7_0.2.0          
-[57] getPass_0.2-4     </code></pre>
+ [5] stringi_1.8.7      digest_0.6.37      magrittr_2.0.4     evaluate_1.0.5    
+ [9] grid_4.5.1         RColorBrewer_1.1-3 fastmap_1.2.0      rprojroot_2.1.1   
+[13] workflowr_1.7.2    jsonlite_2.0.0     whisker_0.4.1      promises_1.4.0    
+[17] viridisLite_0.4.2  scales_1.4.0       textshaping_1.0.4  jquerylib_0.1.4   
+[21] cli_3.6.5          rlang_1.1.6        withr_3.0.2        cachem_1.1.0      
+[25] yaml_2.3.10        otel_0.2.0         tools_4.5.1        httpuv_1.6.16     
+[29] vctrs_0.6.5        R6_2.6.1           lifecycle_1.0.4    git2r_0.36.2      
+[33] stringr_1.5.2      fs_1.6.6           pkgconfig_2.0.3    pillar_1.11.1     
+[37] bslib_0.9.0        later_1.4.4        gtable_0.3.6       glue_1.8.0        
+[41] Rcpp_1.1.0         systemfonts_1.3.1  xfun_0.53          tibble_3.3.0      
+[45] tidyselect_1.2.1   rstudioapi_0.17.1  farver_2.1.2       htmltools_0.5.8.1 
+[49] rmarkdown_2.30     svglite_2.2.2      compiler_4.5.1     S7_0.2.0          </code></pre>
 </div>
 </div>
 </div>
